@@ -9,8 +9,7 @@ import pywt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 # read OGTT df
-df_ogtt = pd.read_csv('/home/zhi/data/Diet_LatentODE/df_biochem_blood_withmissing.csv', index_col=0)
-df_para = pd.read_csv('/home/zhi/nas/Diet_challenge/bloodsample.csv')
+df_ogtt = pd.read_csv('df_ogtt.csv', index_col=0)
 
 ogtt_times = np.array([0, 15, 30, 60, 90, 120, 150, 240]) 
 subject_ids = df_ogtt.index.to_numpy()
