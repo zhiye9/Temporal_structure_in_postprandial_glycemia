@@ -7,7 +7,7 @@ This repository contains code for the manuscript "Temporal structure in postpran
 
 Access to the Human Phenotype Project (HPP) used in this study can be requested through [https://humanphenotypeproject.org/](https://humanphenotypeproject.org/). The Stanford OGTT dataset is available at [https://www.nature.com/articles/s41551-024-01311-6](https://www.nature.com/articles/s41551-024-01311-6). The COPSAC2000 dataset is available upon request at [mortenr@food.ku.dk](mailto:mortenr@food.ku.dk). 
 
-We provide a synthetic dataset for testing the code in this repository. The synthetic dataset is available at `Synthetic_data/synthetic_data.csv`. The synthetic dataset is generated to mimic the structure of the real datasets used in this study, but it does not contain any real participant data or physiological information. The synthetic dataset is generated using [https://github.com/jxx123/simglucose](simglucose).
+We provide a synthetic dataset for testing the code in this repository. The synthetic dataset is available at `synthetic_data/synthetic_data.csv`. The synthetic dataset is generated to mimic the structure of the real datasets used in this study, but it does not contain any real participant data or physiological information. The synthetic dataset is generated using [simglucose](https://github.com/jxx123/simglucose).
 
 ## This repository contains code in `src` used for:
 

@@ -7,8 +7,8 @@ Columns: participant_id,participant_id, meal_id, pp_cgm_glucose_min_{0,15,...,18
 
 
 Output: df_swt.csv. Same meal-level data with added columns swt_db2_energy_{cA2,cD2,cD1}, peak_rise, iauc, peak_time. 
+        Fig2a.png
 """
-
 import numpy as np
 import pandas as pd
 import pywt
