@@ -120,6 +120,6 @@ for col, gblup_col in zip(response_cols, gblup_cols):
 
 all_cvblups = (all_cvblups.set_index('participant_id', verify_integrity=True)
                          .reindex(columns=gblup_cols).reset_index())
-cvblup_csv = 'GCTA_new195/greml_outputs_v2/all_cvblups_zscore_v2.csv'
+cvblup_csv = 'GCTA/greml_outputs_v2/all_cvblups_zscore_v2.csv'
 os.makedirs(os.path.dirname(cvblup_csv), exist_ok=True)
 all_cvblups.to_csv(cvblup_csv, index=False)

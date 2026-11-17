@@ -4,8 +4,8 @@ Input: df_swt.csv from 1_swt_features.py. Meal-level cgm features and nutrient d
 
 Output: section3b_blup_reliability_summary.csv for 3_cross_level_interaction.py
         option_a_blup_multi.csv for 4_phenotyping_validation.py. 
-        Fig2a.png.
-        Figs4.png.
+        fig2a.png.
+        figs4.png.
 """
 import time
 import warnings

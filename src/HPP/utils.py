@@ -71,11 +71,10 @@ def lrt_test(llf_full, llf_ref, n_extra=2):
     return stat, p_std, p_mix
 
 
-def fit_joint_model(data, baseline, joint_interact, formula_nutrients, base_cols, min_meals=5):
+def fit_joint_model(data, baseline, joint_interact, formula_nutrients, base_cols):
     """Fit one response's Phase B model and return its results dictionary.
 
-    Use complete records for the selected moderators and response, then retain
-    participants with at least min_meals records. The caller selects moderators,
+    Use complete records for the selected moderators and response. The caller selects moderators,
     including the response-specific gBLUP column, and handles result exports.
     """
     formula_rhs = (formula_nutrients + " + " + " + ".join(joint_interact)
@@ -83,7 +82,7 @@ def fit_joint_model(data, baseline, joint_interact, formula_nutrients, base_cols
     resp_col = baseline['resp_col']
     df_fit = data.dropna(subset=base_cols + joint_interact + [resp_col])
     meal_counts = df_fit.groupby('participant_id').size()
-    df_fit = df_fit[df_fit['participant_id'].isin(meal_counts[meal_counts >= min_meals].index)].copy()
+    df_fit = df_fit[df_fit['participant_id'].isin(meal_counts.index)].copy()
 
     formula = f"{resp_col} ~ {formula_rhs}"
     fit, status = fit_mixedlm(formula, df_fit, df_fit['participant_id'], "~carb_within")
