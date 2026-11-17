@@ -155,7 +155,7 @@ for resp_name, s3 in stage3_baseline.items():
         rows.append({'r2_marginal': var_fixed/total,
                      'r2_conditional': (var_fixed + res['var_u0'] + res['var_u1']) / total,
                      'gap': (res['var_u0'] + res['var_u1']) / total,
-                     'response': resp_name, 'tag': 'LOG' if s3['is_log'] else 'RAW', 'test': test_name})
+                     'response': resp_name, 'test': test_name})
 df_r2 = pd.DataFrame(rows)
 
 # fig4a: phase A heatmap 
