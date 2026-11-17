@@ -16,6 +16,8 @@ Main analyses on the HPP dataset:
 - `2_mixed_effects_models.py`Progressive multilevel model building (null, nutrients, meal timing, random carbohydrate slopes, multi-nutrient random slopes) with variance component analysis.
 - `3_cross_level_interaction.py`Cross-level interaction analysis: independent screening and joint moderator model.
 - `4_phenotyping_validation.py`Probabilistic phenotype classification into four response profiles with cardiometabolic and pre-diabetes validation. Longitudinal association with HbA1c.
+- `gblup.py` Compute gBLUPs for each response and export for downstream analyses (3_cross_level_interaction.py and 4_phenotyping_validation.py).
+- `hba1c_prediabetes_preprocessing.py` Preprocessing of HbA1c and prediabetes status for downstream analyses (3_cross_level_interaction.py and 4_phenotyping_validation.py).
 
 External validation on Stanford OGTT dataset: 
 - `1_OGTT_features.py`Wavelet feature extraction from OGTT data.
